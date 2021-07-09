@@ -1,5 +1,5 @@
 import { ipcRenderer } from 'electron';
-import { noop, once } from 'lodash';
+import { noop, once } from 'lodash-es';
 
 export const registerIpcRenderer = (store) => {
   const showDownloadComplete = once((name) => {

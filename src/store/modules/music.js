@@ -2,7 +2,7 @@ import { getTrackDetail } from '@/api/music';
 import { favTrack, getLikeList, personalFM } from '@/api';
 import { getUserPlaylist } from '@/api/user';
 import { make } from 'vuex-pathify';
-import { uniqWith, isEqual } from 'lodash';
+import { uniqWith, isEqual } from 'lodash-es';
 const PLAY_MODE = {
   ORDER: 0,
   CYCLE: 1,

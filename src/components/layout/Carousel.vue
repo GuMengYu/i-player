@@ -43,7 +43,7 @@
 
 <script>
 import { mdiChevronLeft, mdiChevronRight } from '@mdi/js';
-import { throttle } from 'lodash';
+import { throttle } from 'lodash-es';
 
 export default {
   name: 'Carousel',

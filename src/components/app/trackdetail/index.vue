@@ -107,7 +107,7 @@ import {
 import { get, sync } from 'vuex-pathify';
 import { formatLyric } from '@/util/fn';
 import VueSlider from 'vue-slider-component';
-import { findIndex } from 'lodash';
+import { findIndex } from 'lodash-es';
 import Control from '@components/app/Control';
 export default {
   name: 'DefaultTrackDetail',

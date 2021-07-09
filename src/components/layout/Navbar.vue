@@ -171,7 +171,7 @@ export default {
         ? {
             title: this.$t('main.nav.created_list'),
             open: true,
-            items: created.map((i) => {
+            items: created.slice(0, 10).map((i) => {
               let title = i.name;
               i['specialType'] === 5 && (title = this.$t('main.my_fav'));
               return {
@@ -186,7 +186,7 @@ export default {
         ? {
             title: this.$t('main.nav.start_list'),
             open: false,
-            items: subscribed.map((i) => {
+            items: subscribed.slice(0, 10).map((i) => {
               return {
                 title: i.name,
                 to: `/playlist/${i.id}`,

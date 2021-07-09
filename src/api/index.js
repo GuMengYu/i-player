@@ -1,5 +1,5 @@
 import { musicXhr as xhr } from '@/util/xhr';
-import { now } from 'lodash';
+import { now } from 'lodash-es';
 
 /**
  * 登录

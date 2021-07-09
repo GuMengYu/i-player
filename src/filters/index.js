@@ -1,4 +1,4 @@
-import { inRange } from 'lodash';
+import { inRange } from 'lodash-es';
 export function sizeOfImage(url, size = 512) {
   if (url) {
     return `${url}?param=${size}y${size}`;

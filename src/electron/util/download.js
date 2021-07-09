@@ -1,5 +1,5 @@
 import { download } from 'electron-dl';
-import { getWin } from '../background';
+import { getWin } from '../../background';
 import { app } from 'electron';
 export const downloadFile = (data) => {
   const win = getWin();

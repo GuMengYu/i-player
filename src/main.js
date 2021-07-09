@@ -4,6 +4,7 @@ import { createRouter } from './router';
 import { createStore } from './store';
 import { createVuetify } from './vuetify';
 import { createI18n } from './i18n';
+import { createPlayer } from './player';
 
 import { createSnackbar } from './plugins/snackbar';
 
@@ -31,6 +32,8 @@ const store = createStore();
 const vuetify = createVuetify(store);
 const i18n = createI18n(store);
 const router = createRouter(vuetify, store);
+const player = createPlayer(store);
+
 Vue.prototype.$message = createSnackbar(vuetify);
 
 if (process.env.IS_ELECTRON) {
@@ -46,5 +49,6 @@ new Vue({
   router,
   i18n,
   vuetify,
+  player,
   render: (h) => h(App),
 }).$mount('#app');

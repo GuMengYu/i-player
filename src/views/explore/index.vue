@@ -62,7 +62,7 @@
 <script>
 import { getCatList, newAlbums, getNewMv, getTopList } from '@/api';
 import CustomCol from '@components/layout/Col';
-import { random, filter } from 'lodash';
+import { random, filter } from 'lodash-es';
 import MTag from '@components/app/Tag';
 import VideoCover from '@components/app/VideoCover';
 import CoverRowSkeleton from '@components/skeleton/CoverRowSkeleton';

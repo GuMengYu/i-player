@@ -8,7 +8,7 @@ import {
   getAlbum,
   getArtist,
 } from '@/api/index';
-import { now } from 'lodash';
+import { now } from 'lodash-es';
 /**
  * 获取歌曲详情，包括歌词、可供播放的url
  * @param id: 歌曲id

@@ -5,11 +5,11 @@ import Express from 'express';
 import { app, protocol, BrowserWindow } from 'electron';
 import is from 'electron-is';
 import installExtension, { VUEJS_DEVTOOLS } from 'electron-devtools-installer';
-import { createElectronMenu } from './menu';
-import { createTray } from './tray';
-import { createApiServer } from './neteaseapi/apiserver';
-import { registerIpcMain } from './ipcMain';
-import WindowManager from './windowManager';
+import { createElectronMenu } from './electron/menu';
+import { createTray } from './electron/tray';
+import { createApiServer } from './electron/neteaseapi/apiserver';
+import { registerIpcMain } from './electron/ipcMain';
+import WindowManager from './electron/windowManager';
 
 // Scheme must be registered before the app is ready
 protocol.registerSchemesAsPrivileged([
@@ -51,7 +51,7 @@ app.on('ready', async () => {
   windowManager = new WindowManager();
   windowManager.openWindow();
   createElectronMenu(windowManager.window);
-  createTray(windowManager.window);
+  is.windows && createTray(windowManager.window);
   registerIpcMain(windowManager.window);
 });
 app.setAboutPanelOptions({

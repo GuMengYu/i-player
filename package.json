@@ -6,7 +6,7 @@
   "author": "hyu<1415515984yuri@@gmail.com>",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --report",
+    "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "electron:build": "vue-cli-service electron:build -p never -mwl",
     "electron:build:mac": "vue-cli-service electron:build -p never --mac",
@@ -17,7 +17,7 @@
     "postinstall": "electron-builder install-app-deps",
     "postuninstall": "electron-builder install-app-deps"
   },
-  "main": "./src/electron/background.js",
+  "main": "background.js",
   "dependencies": {
     "@mdi/js": "^5.8.55",
     "@njzy/unblockneteasemusic": "^0.25.3",
@@ -26,7 +26,7 @@
     "electron-dl": "^3.2.1",
     "howler": "^2.2.1",
     "js-cookie": "^2.2.1",
-    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
     "nprogress": "^0.2.0",
     "plyr": "^3.6.4",
     "vue": "^2.6.11",

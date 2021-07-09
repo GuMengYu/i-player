@@ -18,7 +18,7 @@
 </template>
 <script>
 import { getCatList } from '@/api';
-import { groupBy, entries, random } from 'lodash';
+import { groupBy, entries, random } from 'lodash-es';
 import CustomCol from '@components/layout/Col';
 import MTag from '@components/app/Tag';
 import { getColorTable } from '@util/metadata';

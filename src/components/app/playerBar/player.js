@@ -1,7 +1,6 @@
-<script>
 import { Howl } from 'howler';
 import { sync } from 'vuex-pathify';
-import { throttle } from 'lodash';
+import { throttle } from 'lodash-es';
 export default {
   name: 'Player',
   data: () => ({
@@ -17,7 +16,8 @@ export default {
     track(newTrack, oldTrack) {
       if (newTrack.id !== oldTrack.id) {
         this.init(newTrack.url);
-        console.log('song changed');
+        console.log('song changed', this);
+        this.$player();
       } else {
         this.loadAudio = false;
       }
@@ -129,4 +129,3 @@ export default {
     },
   },
 };
-</script>

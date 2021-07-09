@@ -130,7 +130,7 @@ import {
   mdiArrowExpand,
 } from '@mdi/js';
 
-import Player from './player';
+import Player from './player.js';
 import VueSlider from 'vue-slider-component';
 import { formatDuring } from '@util/fn';
 import Control from '@components/app/Control';
@@ -147,7 +147,7 @@ export default {
     Control,
     VueSlider,
   },
-  extends: Player,
+  mixins: [Player],
   data: () => ({
     icon: {
       mdiHeart,
